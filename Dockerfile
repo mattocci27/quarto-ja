@@ -70,7 +70,6 @@ RUN tlmgr update --self \
       setspace \
       lineno \
       titlesec \
-      xr \
       # Symbols, decoration, and other utilities
       academicons \
       fontawesome5 \
