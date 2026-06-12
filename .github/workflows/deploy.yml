@@ -47,7 +47,7 @@ jobs:
       - name: Install Docker via Colima
         run: |
           brew install colima docker docker-buildx
-          colima start --arch aarch64 --vm-type vz --vz-rosetta
+          colima start --arch aarch64 --vm-type vz
           mkdir -p ~/.docker/cli-plugins
           ln -sfn $(brew --prefix)/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
 
