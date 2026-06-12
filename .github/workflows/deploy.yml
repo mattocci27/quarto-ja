@@ -18,27 +18,16 @@ jobs:
           mkdir -p temp_fonts
           # Japanese fonts (Hiragino)
           cp "/System/Library/Fonts/ヒラギノ明朝 ProN.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ丸ゴ ProN W4.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W0.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W1.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W2.ttc" temp_fonts/ 2>/dev/null || true
           cp "/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W4.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W5.ttc" temp_fonts/ 2>/dev/null || true
           cp "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W7.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W8.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/ヒラギノ角ゴシック W9.ttc" temp_fonts/ 2>/dev/null || true
           # Chinese (bundled with macOS)
-          cp "/System/Library/Fonts/STHeiti Light.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/STHeiti Medium.ttc" temp_fonts/ 2>/dev/null || true
-          cp "/System/Library/Fonts/Hiragino Sans GB.ttc" temp_fonts/ 2>/dev/null || true
+          #cp "/System/Library/Fonts/STHeiti Light.ttc" temp_fonts/ 2>/dev/null || true
+          #cp "/System/Library/Fonts/STHeiti Medium.ttc" temp_fonts/ 2>/dev/null || true
+          #cp "/System/Library/Fonts/Hiragino Sans GB.ttc" temp_fonts/ 2>/dev/null || true
           # Latin serif / sans-serif
           cp /System/Library/Fonts/Optima.ttc temp_fonts/ 2>/dev/null || true
-          cp /System/Library/Fonts/Palatino.ttc temp_fonts/ 2>/dev/null || true
-          cp /System/Library/Fonts/Times.ttc temp_fonts/ 2>/dev/null || true
           cp /System/Library/Fonts/Helvetica.ttc temp_fonts/ 2>/dev/null || true
-          cp /System/Library/Fonts/HelveticaNeue.ttc temp_fonts/ 2>/dev/null || true
+          cp /System/Library/Fonts/Times.ttc temp_fonts/ 2>/dev/null || true
           cp /System/Library/Fonts/Courier.ttc temp_fonts/ 2>/dev/null || true
 
       # Save the extracted fonts as a temporary artifact
