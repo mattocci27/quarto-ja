@@ -10,7 +10,6 @@ on:
 jobs:
   build-on-mac:
     name: Build on macOS Runner (arm64)
-    # ★ Using macOS (Apple Silicon) here so the runner's native fonts can be used safely!
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
@@ -45,6 +44,13 @@ jobs:
           cp /System/Library/Fonts/Courier.ttc temp_fonts/ 2>/dev/null || true
 
       # 2. Set up Docker environment (macOS runner does not include Docker by default, so install buildx etc.)
+      - name: Install Docker via Colima
+        run: |
+          brew install colima docker docker-buildx
+          colima start --arch aarch64 --vm-type vz --vz-rosetta
+          mkdir -p ~/.docker/cli-plugins
+          ln -sfn $(brew --prefix)/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
